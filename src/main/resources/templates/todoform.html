@@ -7,6 +7,7 @@
 <body>
     <h1>Enter Todo</h1>
 <form action="#" th:action="@{/process}" th:object="${todo}" method="post">
+    <input type="hidden" th:field="*{id}" />
     Todo: <input type="text" th:field="*{taskName}"/>
             <span th:if="${#fields.hasErrors('taskName')}"
                   th:errors="*{taskName}"></span><br/>
