@@ -23,6 +23,15 @@ public class Todo {
     @NotNull
     private int priority;
 
+    public Todo(@NotNull @Size(min = 3) String taskName, @NotNull String dueDate, @NotNull int priority) {
+        this.taskName = taskName;
+        this.dueDate = dueDate;
+        this.priority = priority;
+    }
+
+    public Todo() {
+    }
+
     public long getId() {
         return id;
     }
